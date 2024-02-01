@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <p>Your BMI is {{bmi}}: {{status}}</p>
+
+    <p>{{description}}</p>
+
+    <ul>
+        {% for adv in advice %}
+        <li>{{ adv }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href = "/">Go back to the home page.</a>
+
+{% endblock %}
