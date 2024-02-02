@@ -26,4 +26,4 @@ The top model is seamlessly integrated into a Flask Application Programming Inte
 ### Cloud Hosting
 
 - The application is deployed on AWS Elastic Compute Cloud (EC2), leveraging its scalability and reliability.
-- Access the deployed model through this URL: [http://13.38.251.38:5000/](http://13.38.251.38:5000/).
+- Access the deployed model through this URL: [http://15.188.64.219:5000/](http://15.188.64.219:5000/).
