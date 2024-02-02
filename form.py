@@ -2,9 +2,9 @@ from flask_wtf import FlaskForm
 from wtforms import FloatField, SubmitField, DecimalField, RadioField
 from wtforms.validators import InputRequired, NumberRange
 
-min_height = 50
-max_height = 250
-min_weight = 20
+min_height = 120
+max_height = 220
+min_weight = 40
 max_weight = 200
 
 class MetricForm(FlaskForm):

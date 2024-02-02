@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, url_for
 from form import MetricForm
 import joblib
+import os
 
 from data import status, description, advice
 
@@ -8,6 +9,8 @@ from data import status, description, advice
 #add kaggle dataset and link
 #add gender
 #fix in version 2
+
+models_dir = 'models'
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "mysecret"
@@ -17,18 +20,20 @@ app.config["SECRET_KEY"] = "mysecret"
 def home():
     metric_form = MetricForm()
     if metric_form.validate_on_submit():
-        filename = "svm_model.sav"
-        model = joblib.load(filename)
+
+        scaler_name = os.path.join(models_dir, "scaler.sav")
+        scaler = joblib.load(scaler_name)
+        model_name = os.path.join(models_dir, "svm_model.sav")
+        model = joblib.load(model_name)
         
         formgender = metric_form.gender.data
         formheight = metric_form.height.data
         formweight = metric_form.weight.data
+
+        scaled_form = scaler.transform([[formgender, formheight, formweight]])
+        pred_bmi = model.predict(scaled_form).item()
         
-        std_formheight = (formheight - 140)/(199 - 140)
-        std_formweight = (formweight - 50)/(160 - 50)
-        pred_bmi = model.predict([[formgender, std_formheight, std_formweight]]).item()
-        
-        return redirect(url_for('result', bmi = min(max(int(pred_bmi), 1), 5), _external=True))
+        return redirect(url_for('result', bmi = pred_bmi, _external=True))
     return render_template("home.html", form = metric_form)
 
 @app.route("/result/<bmi>", methods=["GET", "POST"])
