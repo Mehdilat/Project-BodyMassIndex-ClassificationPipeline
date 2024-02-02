@@ -7,10 +7,10 @@ In this machine learning project, the ["500 Person Gender-Height-Weight-Body Mas
 ## Project Objectives
 
 The primary goal is to apply machine learning techniques to accurately predict the BMI category. The project focuses on the following machine learning models:
-- Support Vector Machine (SVM)
-- K-Nearest Neighbors (KNN)
-- Random Forests
-- XGBoost
+- Support Vector Machine (SVM).
+- K-Nearest Neighbors (KNN).
+- Random Forests.
+- XGBoost.
 
 The models are trained and evaluated, with the best-performing model being selected for deployment.
 
@@ -21,7 +21,7 @@ The top model is seamlessly integrated into a Flask Application Programming Inte
 ### Containerization
 
 - The Flask API, along with the machine learning model, is containerized using Docker, ensuring consistency and ease of deployment.
-- The Dockerized application is hosted on Docker Hub. You can find the container in [Docker Hub](https://hub.docker.com/repository/docker/mehdilat/bmi_ml/general).
+- The Dockerized application is hosted on Docker Hub as well as in AWS Elastic Container Registry (AWS ECR). You can find the container in [Docker Hub](https://hub.docker.com/repository/docker/mehdilat/bmi_ml/general), [AWS ECR (URI)](341250327392.dkr.ecr.eu-west-3.amazonaws.com/bmi_ml).
 
 ### Cloud Hosting
 
