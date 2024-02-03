@@ -5,11 +5,6 @@ import os
 
 from data import status, description, advice
 
-#implement validation for one or two decimal places
-#add kaggle dataset and link
-#add gender
-#fix in version 2
-
 models_dir = 'models'
 
 app = Flask(__name__)
