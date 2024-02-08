@@ -21,7 +21,7 @@ The top model is seamlessly integrated into a Flask Application Programming Inte
 ### Containerization
 
 - The Flask API, along with the machine learning model, is containerized using Docker, ensuring consistency and ease of deployment.
-- The Dockerized application is hosted on Docker Hub as well as in AWS Elastic Container Registry (AWS ECR). You can find the container in [Docker Hub](https://hub.docker.com/repository/docker/mehdilat/bmi_ml/general), [AWS ECR (URI)](341250327392.dkr.ecr.eu-west-3.amazonaws.com/bmi_ml).
+- The Dockerized application is hosted on Docker Hub as well as in AWS Elastic Container Registry (AWS ECR). You can find the container in [Docker Hub](https://hub.docker.com/repository/docker/mehdilat/bmi_ml/general).
 
 ### Cloud Hosting
 
