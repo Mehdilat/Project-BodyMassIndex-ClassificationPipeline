@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <p>Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.</p>
+
+    <ul>
+        <li>Enter your weight and height using metric measures.</li>
+        <li>Select "Compute BMI" and your BMI will appear below.</li>
+    </ul>
+    
+    <form>
     <p>Your BMI is {{status}}.</p>
 
     <p>{{description}}</p>
@@ -10,7 +18,8 @@
         <li>{{ adv }}</li>
         {% endfor %}
     </ul>
+    </form>
 
-    <a href = "/">Go back to the home page.</a>
+    <a href = "/">Go back to the BMI Calculator Home page.</a>
 
 {% endblock %}

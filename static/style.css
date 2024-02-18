@@ -12,6 +12,9 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 tr, td {
@@ -23,7 +26,7 @@ input[type="text"],
 input[type="number"],
 input[type="submit"] {
     display: block;
-    width: 100%;
+    width: auto;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -62,6 +65,15 @@ input[type="radio"] {
 }
 
 .gender-selection td {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.form-control label, .form-control input {
     display: inline-block;
     margin-right: 10px;
 }

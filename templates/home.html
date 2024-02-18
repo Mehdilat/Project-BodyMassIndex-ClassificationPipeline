@@ -11,16 +11,25 @@
     <form action="/" method="POST">
         {{ form.hidden_tag() }}
         
-        <tr>{% for btn in form.gender %}
-              <td>{{ btn }}</td>
-              <td>{{ btn.label }}</td>
-        {% endfor %}</tr>
+        <tr>
+            {% for btn in form.gender %}
+                <td>{{ btn }}</td>
+                <td>{{ btn.label }}</td>
+            {% endfor %}
+        </tr>
         
-        <p>{{ form.height.label }}
-        {{ form.height() }}</p>
-        <p>{{ form.weight.label }}
-        {{ form.weight() }}</p>
-        <p>{{ form.submit() }}</p>
+
+        <div class="form-control">
+            {{ form.height.label }}
+            {{ form.height() }}
+        </div>
+        <div class="form-control">
+            {{ form.weight.label }}
+            {{ form.weight() }}
+        </div>
+        <div class="form-control">
+            {{ form.submit() }}
+        </div>
     </form>
 
 {% endblock %}
