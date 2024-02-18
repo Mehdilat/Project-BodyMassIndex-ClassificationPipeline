@@ -9,6 +9,6 @@ max_weight = 200
 
 class MetricForm(FlaskForm):
     gender = RadioField("Gender", choices = [(0, 'Male'), (1, 'Female')], validators=[InputRequired("Please choose an option")])
-    height =  DecimalField("Height", places = 2, validators=[InputRequired("This field is required"), NumberRange(min = min_height, max = max_height, message="Value must be between 100 and 200")])
-    weight =  DecimalField("Weight", places = 1, validators=[InputRequired("This field is required"), NumberRange(min = min_weight, max = max_weight, message="Value must be between 100 and 200")])
+    height =  DecimalField("Height (cm)", places = 2, validators=[InputRequired("This field is required"), NumberRange(min = min_height, max = max_height, message=f"Value must be between {min_height} and {max_height}")])
+    weight =  DecimalField("Weight (kg)", places = 1, validators=[InputRequired("This field is required"), NumberRange(min = min_weight, max = max_weight, message=f"Value must be between {min_weight} and {max_weight}")])
     submit = SubmitField("Compute BMI")
